@@ -24,7 +24,7 @@
 #define CONTROL 3
 
 #define LAYERS_ARTSEY_BASE LAYER_ID_DEFAULT LAYER_ID_BASE
-#define LAYERS_ARTSEY LAYER_ID_BASE LAYER_ID_NUMBERS LAYER_ID_SYMBOLS LAYER_ID_PARENTHETICALS LAYER_ID_NAVIGATION LAYER_ID_BT_SEL LAYER_ID_CUSTOM LAYER_ID_BIG_SYM LAYER_ID_BIG_FUNCTION
+#define LAYERS_ARTSEY LAYER_ID_BASE LAYER_ID_NUMBERS LAYER_ID_SYMBOLS LAYER_ID_PARENTHETICALS LAYER_ID_NAVIGATION LAYER_ID_BT_SEL LAYER_ID_CUSTOM
 #define LAYERS_ARTSEY_PLUS LAYER_ID_DEFAULT LAYERS_ARTSEY
 
 ////////////////////////////////////////
@@ -119,9 +119,6 @@
 		 * 2 key combos
 		 *****************************************/
 		// Function layer doesn't apply to non-big artsey presently
-		#if defined ARTSEY_BIG
-		combo_layer_functions { layers = <LAYERS_ARTSEY_PLUS>; key-positions = <KEY_F_TOP KEY_F_BOTTOM>; bindings = <&sl LAYER_ID_BIG_FUNCTION>; };
-		#endif
 		combo_enter      { layers = <LAYERS_ARTSEY>; timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_A KEY_E>; bindings = <&kp ENTER>; };
 		combo_control    { layers = <LAYERS_ARTSEY>; timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_E KEY_S>; bindings = <&sk RCTRL>; };
 		combo_gui        { layers = <LAYERS_ARTSEY>; timeout-ms = <TIMEOUT_COMBO_2>; key-positions = <KEY_Y KEY_S>; bindings = <&sk LGUI>; };
